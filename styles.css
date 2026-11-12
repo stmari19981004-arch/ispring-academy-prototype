@@ -166,3 +166,13 @@ html:not(.is-fitted) body{max-width:1440px;margin:0 auto}
   .learning-card-slot{position:static;width:1321px;height:568px}
   .learning-card,.learning-card-reverse{position:relative;top:auto}
 }
+
+/* Правки после ревью: читаемость и акценты */
+.hero-intro{height:528px}
+.hero-kicker{width:auto;white-space:nowrap}
+.hero-description{width:auto;height:auto;line-height:1.3}
+.hero-proof{margin:14px 0 0;color:rgba(18,18,18,.55);font-size:14px;line-height:1.3;letter-spacing:-.14px;text-align:center}
+.demo-callout-right{top:63px}
+.demo-callout span{width:160px;white-space:nowrap}
+.learning-card-copy>div>p,.learning-card-reverse .learning-card-copy>div>p{width:auto;height:auto;line-height:1.3}
+.learning-checklist,.learning-card-reverse .learning-checklist{color:#121212}
