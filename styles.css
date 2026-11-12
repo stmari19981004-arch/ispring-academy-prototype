@@ -154,13 +154,10 @@ body{background:#f4f4f2;color:#121212}
 .learning-card-reverse .stage-grid img{left:74px}
 .project-ui{position:relative;z-index:2;width:710px;flex:0 0 710px;height:508px}
 
-@media(max-width:900px){
-  body{min-width:320px}
-  .site-header,.hero,.learning{width:1440px;transform-origin:top left}
-  .site-header{transform:scale(calc(100vw / 1440))}
-  .hero{margin-top:calc(76px * (100vw / 1440 - 1));transform:scale(calc(100vw / 1440))}
-  .learning{margin-top:calc(1113px * (100vw / 1440 - 1));transform:scale(calc(100vw / 1440))}
-}
+/* Макет собран под 1440 px: на экранах уже он пропорционально уменьшается целиком (см. fit.js) */
+html.is-fitted body{width:1440px;min-width:0;zoom:var(--fit,1)}
+/* На экранах шире 1440 px композиция по центру */
+html:not(.is-fitted) body{max-width:1440px;margin:0 auto}
 
 @media(max-width:900px),(max-height:719px),(prefers-reduced-motion:reduce){
   .learning-card-heading{height:100px}

@@ -7,6 +7,21 @@
   <title>Разработчик электронных курсов — Академия iSpring</title>
   <link rel="icon" href="assets/ispring-academy.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script>
+(() => {
+  const BASE = 1440;
+  const root = document.documentElement;
+  function fit() {
+    const width = root.clientWidth || window.innerWidth;
+    const scale = Math.min(1, width / BASE);
+    root.style.setProperty('--fit', scale);
+    root.classList.toggle('is-fitted', scale < 1);
+  }
+  fit();
+  window.addEventListener("resize", fit);
+  window.addEventListener("load", fit);
+})();
+  </script>
 </head>
 <body>
   <header class="site-header">
